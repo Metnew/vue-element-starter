@@ -9,7 +9,7 @@
 - [Webpack](https://webpack.github.io/)
 - [TestCafe](https://testcafe.devexpress.com/) for testing
 
-## Out-of-box (default theme color: purple):
+## Out-of-box (themes color is purple, but you can use your own color, more info below):
 
 ![](https://github.com/Metnew/vue-element-starter/blob/gh-pages/screen.gif?raw=true)
 
