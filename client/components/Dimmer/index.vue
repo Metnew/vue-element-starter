@@ -6,21 +6,7 @@
 <script>
 export default {
     name: 'Dimmer',
-    props:['active', 'closeDimmer'],
-    methods: {
-        // closeDimmer() {
-        //     this.closeDimmer();
-        // }
-    },
-    computed: {
-
-    },
-    data() {
-        return {}
-    },
-    beforeUpdate() {
-        console.log(this)
-    }
+    props:['active', 'closeDimmer']
 }
 </script>
 

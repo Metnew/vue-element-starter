@@ -23,9 +23,8 @@ module.exports = {
     alias: {
       root: path.join(__dirname, '../client'),
       components: path.join(__dirname, '../client/components'),
-      theme: path.join(__dirname, '../theme'), // easily get Element-UI icons
-      scss_vars: path.resolve(__dirname, '../client/styles/vars.scss'), // easily get your scss vars
-      styles: path.join(__dirname, '../client/styles') // for your scss file
+      scss_vars: path.resolve(__dirname, '../client/styles/vars.scss'), //  get scss vars
+      styles: path.join(__dirname, '../client/styles') // get scss files
     },
     modules: [
         // places where to search for required modules
