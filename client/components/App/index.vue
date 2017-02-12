@@ -1,15 +1,19 @@
 <template>
 <div id="app">
-    <sidebar-component :active="activeSidebar" />
-    <header-component :sidebarOpened="activeSidebar" :openSidebar="openSidebar" />
-    <main :class="mainClass">
-        <div class="main-content">
-            <el-row class="container">
-                <router-view></router-view>
-            </el-row>
-        </div>
-    </main>
-    <dimmer :active="activeDimmer" :closeDimmer="closeDimmer" />
+    <div class="page-layout">
+        <sidebar-component :active="activeSidebar" />
+        <div class="page-layout-inner">
+            <header-component :sidebarOpened="activeSidebar" :openSidebar="openSidebar" />
+            <main>
+            <div class="main-content">
+                <el-row class="container">
+                    <router-view></router-view>
+                </el-row>
+            </div>
+        </main>
+    </div>
+        <dimmer :active="activeDimmer" :closeDimmer="closeDimmer" />
+    </div>
 </div>
 </template>
 <script>
@@ -20,9 +24,6 @@ export default {
     name: 'App',
     data() {
         return {
-            mainClass: {
-                no_sidebar: false
-            },
             activeSidebar: window.innerWidth > 1024,
             activeDimmer: false
         }
@@ -37,7 +38,9 @@ export default {
             this.activeSidebar = false
         },
         handleResize() {
-            let {innerWidth} = window;
+            let {
+                innerWidth
+            } = window;
             this.activeSidebar = (innerWidth > 1024)
         }
     },
@@ -55,5 +58,4 @@ export default {
 <style lang="scss">
 // You can import all your SCSS variables using webpack alias
 @import '~scss_vars';
-@import './style.scss';
-</style>
+@import './style.scss';</style>

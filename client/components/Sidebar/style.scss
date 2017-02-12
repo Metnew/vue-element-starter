@@ -4,18 +4,13 @@
     border-right: 1px solid $grey;
     box-shadow: inset 0 0 0 0 $grey,0 2px 1px 0 rgba(47,61,73,.05);
     height: 100%;
-    // overwrite semantic-ui undocumented styles
     visibility: visible!important;
     overflow-x: hidden;
     will-change: transform;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-property: transform;
-    // display: flex;
-    // overwrite semantic-ui undocumented styles
-    // &.closed {
-    //     transform: translate3d($sidebar-size, 0, 0)!important;
-    // }
+    position: fixed;
     &.open {
         z-index: 11111;
         transform: translate3d(0, 0, 0)!important;
@@ -35,16 +30,11 @@
     }
 
     .logo-container {
-        // display: flex;
         text-align: center;
         width: 100%;
-        // padding: 15px;
         .logo {
-            // align-items: center;
-            // align-content: center;
             width: 215px;
             height: 215px;
-            // color: #000;
         }
     }
 }
