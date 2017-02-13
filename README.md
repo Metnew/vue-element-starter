@@ -40,27 +40,28 @@ Template built based on [Vuepack bolirplate](https://github.com/egoist/vuepack)
 ## To start:
 
 ```bash
-$ git clone https://github.com/Metnew/vue-element-starter.git vue-project && cd vue-project && rm -rf .git
-$ npm install
-$ npm run generate_default_styles
+ git clone https://github.com/Metnew/vue-element-starter.git vue-project  
+ cd vue-project && rm -rf .git
+ npm install
+ npm run generate_default_styles
 ```
 
 [Element-theme](https://www.npmjs.com/package/element-theme) will generate default styles. Just **change primary-color** in `./client/element-variables.css` and run:
 
 ```bash
-$ npm run generate_theme
+ npm run generate_theme
 ```
 
 Now app is ready and you can run it with:
 
 ```bash
-$ npm run dev
+ npm run dev
 ```
 
 Make production build:
 
 ```bash
-$ npm run build
+ npm run build
 ```
 
 Lint your code:
