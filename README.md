@@ -40,7 +40,7 @@ Template built based on [Vuepack bolirplate](https://github.com/egoist/vuepack)
 ## To start:
 
 ```bash
-$ git clone https://github.com/Metnew/vue-element-starter.git
+$ git clone https://github.com/Metnew/vue-element-starter.git vue-project && cd vue-project && rm -rf .git
 $ npm install
 $ npm run generate_default_styles
 ```
