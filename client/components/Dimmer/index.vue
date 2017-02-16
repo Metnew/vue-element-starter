@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss">
 .dimmer {
-    position: absolute;
+    position: fixed;
     top: 0!important;
     left: 0!important;
     text-align: center;
@@ -28,7 +28,6 @@ export default {
     width: 100%;
     height: 100%;
     display: none;
-    position: absolute;
     &.active {
         display: block!important;
         visibility: visible!important;
