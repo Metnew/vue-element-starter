@@ -4,7 +4,7 @@
 ## Includes:
 
 - [Element](http://element.eleme.io/#/en-US) and normalize.css
-- [Vue](https://vuejs.org/) & Vue-router
+- [Vue -v 2.1](https://vuejs.org/) & Vue-router
 - [Vuex](https://github.com/vuejs/vuex) & Vuex-router-sync
 - [Fetch polyfill](https://www.npmjs.com/package/whatwg-fetch)
 - [Webpack](https://webpack.github.io/)
