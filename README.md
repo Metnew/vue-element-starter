@@ -46,7 +46,8 @@ Template built based on [Vuepack bolirplate](https://github.com/egoist/vuepack)
  npm run generate_default_styles
 ```
 
-[Element-theme](https://www.npmjs.com/package/element-theme) will generate default styles. Just **change primary-color** in `./client/element-variables.css` and run:
+[Element-theme](https://www.npmjs.com/package/element-theme) will generate default styles.     
+Just **change primary-color** in `./client/element-variables.css` and run:
 
 ```bash
  npm run generate_theme
@@ -69,3 +70,8 @@ Lint your code:
 ```bash
 $ npm run lint
 ```
+
+### Also
+PRs, issues, questions, \<something-another> are always welcome.     
+Feel free to contact me (or just add new issue), if you think that this starter is lacking some additional info/code.
+
