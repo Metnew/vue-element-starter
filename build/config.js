@@ -9,7 +9,7 @@ module.exports = {
   publicPath: '/',
   // add these dependencies to a standalone vendor bundle
   vendor: [
-    'vue', 'vuex', 'vue-router', 'vuex-router-sync', 'whatwg-fetch'
+    'vue', 'vuex', 'vue-router', 'vuex-router-sync', 'whatwg-fetch', 'normalize.css'
   ],
   // disable babelrc by default
   babel: {
