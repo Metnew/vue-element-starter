@@ -15,7 +15,7 @@ module.exports = {
   babel: {
     babelrc: false,
     presets: [
-      'vue-app', 'stage-3'
+      'vue-app', 'stage-0'
     ]
   },
   postcss: [

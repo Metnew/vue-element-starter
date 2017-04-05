@@ -9,7 +9,7 @@
         main {
             z-index: 1;
             overflow-x: auto;
-            height: 100%;
+            height: calc(100% - 80px);
             padding-top: 80px;
             position: absolute;
             transform-style: preserve-3d;
