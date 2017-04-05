@@ -1,5 +1,7 @@
 # Vue-Element-Starter
 #### Demo: https://metnew.github.io/vue-element-starter/
+[![David](https://img.shields.io/david/Metnew/vue-element-starter.svg)]()
+[![David](https://img.shields.io/david/dev/Metnew/vue-element-starter.svg)]()
 
 ## Includes:
 
@@ -74,4 +76,3 @@ $ npm run lint
 ### Also
 PRs, issues, questions, \<something-another> are always welcome.     
 Feel free to contact me (or just add new issue), if you think that this starter is lacking some additional info/code.
-
