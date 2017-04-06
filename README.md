@@ -1,8 +1,9 @@
 # Vue-Element-Starter
 #### Demo: https://metnew.github.io/vue-element-starter/
+
 [![David](https://img.shields.io/david/Metnew/vue-element-starter.svg)]()
 [![David](https://img.shields.io/david/dev/Metnew/vue-element-starter.svg)]()
-
+[![Known Vulnerabilities](https://snyk.io/test/github/metnew/vue-element-starter/badge.svg)](https://snyk.io/test/github/metnew/vue-element-starter)
 ## Includes:
 
 - [Element](http://element.eleme.io/#/en-US) and normalize.css
@@ -76,3 +77,9 @@ $ npm run lint
 ### Also
 PRs, issues, questions, \<something-another> are always welcome.     
 Feel free to contact me (or just add new issue), if you think that this starter is lacking some additional info/code.
+
+### Author
+Vladimir Metnew <vladimirmetnew@gmail.com>
+
+### LICENSE
+MIT
