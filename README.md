@@ -14,7 +14,7 @@
 - [TestCafe](https://testcafe.devexpress.com/) for testing
 
 ## Out-of-box:
-### (themes color is purple, but you can use your own color, more info below)
+### (theme's color is purple, but you can use your own color, more info below)
 
 ![](https://github.com/Metnew/vue-element-starter/blob/gh-pages/screen.gif?raw=true)
 
