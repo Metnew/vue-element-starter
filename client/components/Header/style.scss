@@ -11,6 +11,7 @@ header {
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-property: transform;
     width: 100%;
+    height: $header-height;
 
     @include respond-to('sm', 'xs') {
         transform: translate3d(0, 0, 0)!important;
@@ -19,6 +20,10 @@ header {
     @include respond-to('lg') {
         width: calc(100% - #{$sidebar-size});
         transform: translate3d($sidebar-size, 0, 0)!important;
+    }
+
+    .el-menu {
+        border-radius: 0;
     }
 
     &.no_sidebar {
@@ -41,6 +46,7 @@ header {
     .header-menu {
         float: right!important;
     }
+
     .header-title {
         font-size: 24px;
         color: $white;
