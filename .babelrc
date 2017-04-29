@@ -1,0 +1,13 @@
+{
+    "plugins": ["lodash",
+        [
+            "transform-runtime", {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+            },
+        ]
+    ],
+    "presets": ["es2015", "vue-app", "stage-0"]
+}
