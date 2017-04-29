@@ -1,7 +1,6 @@
 'use strict'
-const fs = require('fs')
+// const fs = require('fs')
 const path = require('path')
-const chalk = require('chalk')
 const express = require('express')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.dev')
@@ -29,16 +28,24 @@ try {
 
 const devMiddleWare = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  quiet: true
+  quiet: false,
+  hot: true,
+  inline: true,
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': '*',
+    'Access-Control-Allow-Headers': '*'
+  }
 })
 app.use(devMiddleWare)
-app.use(require('webpack-hot-middleware')(compiler, {
-  log: () => {}
-}))
+app.use(
+  require('webpack-hot-middleware')(compiler, {
+    log: () => {}
+  })
+)
 
 const mfs = devMiddleWare.fileSystem
 const file = path.join(webpackConfig.output.path, 'index.html')
-
 
 devMiddleWare.waitUntilValid()
 
