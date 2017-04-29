@@ -1,10 +1,13 @@
 # Vue-Element-Starter
 #### Demo: https://metnew.github.io/vue-element-starter/
 
+[![David](https://img.shields.io/david/Metnew/vue-element-starter.svg)]()
+[![David](https://img.shields.io/david/dev/Metnew/vue-element-starter.svg)]()
+[![Known Vulnerabilities](https://snyk.io/test/github/metnew/vue-element-starter/badge.svg)](https://snyk.io/test/github/metnew/vue-element-starter)
 ## Includes:
 
 - [Element](http://element.eleme.io/#/en-US) and normalize.css
-- [Vue](https://vuejs.org/) & Vue-router
+- [Vue -v 2.1](https://vuejs.org/) & Vue-router
 - [Vuex](https://github.com/vuejs/vuex) & Vuex-router-sync
 - [Fetch polyfill](https://www.npmjs.com/package/whatwg-fetch)
 - [Webpack](https://webpack.github.io/)
@@ -48,7 +51,7 @@ Template built based on [Vuepack bolirplate](https://github.com/egoist/vuepack)
  # You can run this command to generate it again(if it doesn't exist)
 ```
 
-[Element-theme](https://www.npmjs.com/package/element-theme) will generated default styles. Just **change primary-color** in `./client/element-variables.css` and run:
+[Element-theme](https://www.npmjs.com/package/element-theme) default styles are already in `/client` folder. Just **change primary-color** in `./client/element-variables.css` and run:
 
 ```bash
  npm run generate_theme
@@ -65,3 +68,13 @@ Make production build:
 ```bash
  npm run build
 ```
+
+### Also
+PRs, issues, questions, \<something-another> are always welcome.     
+Feel free to contact me (or add new issue).
+
+### Author
+Vladimir Metnew <vladimirmetnew@gmail.com>
+
+### LICENSE
+MIT
