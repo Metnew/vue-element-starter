@@ -19,46 +19,56 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false
   },
   resolve: {
-    extensions: ['.js', '.vue', '.css', '.json', '.scss'],
+    extensions: ['.js', '.vue', '.css', '.json', '.scss', '.eot', '.svg', '.ttf', '.woff'],
     alias: {
       root: path.join(__dirname, '../client'),
       components: path.join(__dirname, '../client/components'),
+      views: path.join(__dirname, '../client/views'),
+      router: path.join(__dirname, '../client/router'),
       theme: path.join(__dirname, '../theme'), // get Element-UI icons
       scss_vars: path.resolve(__dirname, '../client/styles/vars.scss'), //  get scss vars
       styles: path.join(__dirname, '../client/styles') // get scss files
     },
     modules: [
-        // places where to search for required modules
+      // places where to search for required modules
       _.cwd('node_modules'),
       _.cwd('client'),
       _.cwd('theme')
     ]
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loaders: ['vue-loader']
+        use: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        enforce: 'pre',
+        use: 'eslint-loader?fix=true',
         exclude: [/node_modules/]
       },
       {
-        test: /\.es6$/,
-        loaders: ['babel-loader']
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: [/node_modules/]
       },
       {
-        test: /\.(ico|jpg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'url-loader?limit=100000'
-        // query: {
-        //   name: 'static/media/[name].[hash:8].[ext]'
-        // }
+        test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
+        use: 'file-loader?limit=100000'
       },
       {
-        test: /\.svg$/,
-        loader: 'raw-loader'
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?limit=100000',
+          {
+            loader: 'img-loader',
+            options: {
+              enabled: true,
+              optipng: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -68,7 +78,6 @@ module.exports = {
       template: path.resolve(__dirname, 'index.html'),
       filename: _.outputIndexPath
     }),
-    new webpack.LoaderOptionsPlugin(_.loadersOptions()),
     new CopyWebpackPlugin([
       {
         from: _.cwd('./static'),
