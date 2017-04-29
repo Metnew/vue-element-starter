@@ -1,12 +1,12 @@
 <template>
-<div class="dimmer" :class="{active}" @click="closeDimmer">
+<div class="dimmer" :class="{active}" @click="closeSidebar">
 </div>
 </template>
 
 <script>
 export default {
-    name: 'Dimmer',
-    props:['active', 'closeDimmer']
+  name: 'Dimmer',
+  props: ['active', 'closeSidebar']
 }
 </script>
 

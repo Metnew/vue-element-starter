@@ -11,7 +11,7 @@
            </template>
            <el-menu-item-group title="JS Posts">
              <el-menu-item index="/post/1">Post #1</el-menu-item>
-             <el-menu-item index="/post/2">Post #3</el-menu-item>
+             <el-menu-item index="/post/2">Post #2</el-menu-item>
            </el-menu-item-group>
            <el-menu-item-group title="Python Posts">
              <el-menu-item index="/post/3">Post #3</el-menu-item>
@@ -27,20 +27,15 @@
 </template>
 
 <script>
-// import logo from './logo'
 export default {
-    name: 'Sidebar',
-    props: ['active'],
-    // components: {
-    //     logo
-    // },
-    data() {
-        return {}
-    },
-    methods: {
-
-    },
-    ready() {}
+  name: 'Sidebar',
+  props: ['active'],
+  computed () {
+      active: () => {
+          console.log(this)
+          return this.active
+      }
+  }
 }
 </script>
 
