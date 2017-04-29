@@ -19,7 +19,17 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false
   },
   resolve: {
-    extensions: ['.js', '.vue', '.css', '.json', '.scss', '.eot', '.svg', '.ttf', '.woff'],
+    extensions: [
+      '.js',
+      '.vue',
+      '.css',
+      '.json',
+      '.scss',
+      '.eot',
+      '.svg',
+      '.ttf',
+      '.woff'
+    ],
     alias: {
       root: path.join(__dirname, '../client'),
       components: path.join(__dirname, '../client/components'),

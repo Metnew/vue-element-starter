@@ -13,7 +13,6 @@ const pkg = require('../package')
 const _ = require('./utils')
 const config = require('./config')
 
-
 // remove dist folder
 exec('rm -rf dist/')
 // use source-map
@@ -60,7 +59,7 @@ base.plugins.push(
     name: 'vendor',
     filename: 'vendor.[chunkhash:8].js'
   }),
-  new PreloadWebpackPlugin({rel: 'preload', as: 'script', include: 'all'}),
+  new PreloadWebpackPlugin({ rel: 'preload', as: 'script', include: 'all' }),
   // progressive web app
   // it uses the publicPath in webpack config
   new OfflinePlugin({
