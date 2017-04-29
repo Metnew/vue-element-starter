@@ -6,7 +6,7 @@
                 <i class="md-icon">menu</i>
             </el-button>
         </el-menu-item>
-        <span v-if="showPageTitle" class="header-title">{{pageTitle}}</span>
+        <span class="header-title">{{title}}</span>
         <el-submenu class="header-menu" index="3">
             <template slot="title">Workspace</template>
                 <el-menu-item index="4-1">item one</el-menu-item>
@@ -19,26 +19,8 @@
 
 <script>
 export default {
-    name: 'Header',
-    props: ['openSidebar', 'sidebarOpened'],
-    methods: {
-        handleResize() {
-            if (window.innerWidth > 480) {
-                this.showPageTitle = true
-            } else {
-                this.showPageTitle = false
-            }
-        }
-    },
-    data() {
-        return {
-            showPageTitle: window.innerWidth > 480,
-            pageTitle:this.$route.meta.title || 'Title'
-        }
-    },
-    created() {
-        window.addEventListener('resize', this.handleResize)
-    }
+  name: 'Header',
+  props: ['openSidebar', 'title']
 }
 </script>
 
