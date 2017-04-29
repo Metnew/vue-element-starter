@@ -4,6 +4,8 @@ process.env.NODE_ENV = 'production'
 const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
 const OfflinePlugin = require('offline-plugin')
 const base = require('./webpack.base')
@@ -11,16 +13,27 @@ const pkg = require('../package')
 const _ = require('./utils')
 const config = require('./config')
 
-if (config.electron) {
-  // remove dist folder in electron mode
-  exec('rm -rf app/assets/')
-} else {
-  // remove dist folder in web app mode
-  exec('rm -rf dist/')
-  // use source-map in web app mode
-  base.devtool = 'source-map'
-}
 
+// remove dist folder
+exec('rm -rf dist/')
+// use source-map
+base.devtool = 'cheap-source-map'
+base.module.rules.push(
+  {
+    test: /\.css$/,
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: 'css-loader'
+    })
+  },
+  {
+    test: /\.scss$/,
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: ['css-loader', 'sass-loader']
+    })
+  }
+)
 // a white list to add dependencies to vendor chunk
 base.entry.vendor = config.vendor
 // use hash filename to support long-term caching
@@ -28,7 +41,8 @@ base.output.filename = '[name].[chunkhash:8].js'
 // add webpack plugins
 base.plugins.push(
   new ProgressPlugin(),
-  new ExtractTextPlugin('styles.[contenthash:8].css'),
+  new ExtractTextPlugin('[name].[contenthash:8].css'),
+  new OptimizeCssAssetsPlugin(),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
   }),
@@ -46,6 +60,7 @@ base.plugins.push(
     name: 'vendor',
     filename: 'vendor.[chunkhash:8].js'
   }),
+  new PreloadWebpackPlugin({rel: 'preload', as: 'script', include: 'all'}),
   // progressive web app
   // it uses the publicPath in webpack config
   new OfflinePlugin({
@@ -56,23 +71,6 @@ base.plugins.push(
     }
   })
 )
-
-// extract css in standalone css files
-_.cssProcessors.forEach(processor => {
-  let loaders
-  if (processor.loader === '') {
-    loaders = ['postcss-loader']
-  } else {
-    loaders = ['postcss-loader', processor.loader]
-  }
-  base.module.loaders.push({
-    test: processor.test,
-    loader: ExtractTextPlugin.extract({
-      use: [_.cssLoader].concat(loaders),
-      fallback: 'style-loader'
-    })
-  })
-})
 
 // minimize webpack output
 base.stats = {
