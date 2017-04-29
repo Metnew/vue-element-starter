@@ -6,3 +6,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.$mount('#app')
+
+if (module.hot) {
+  module.hot.accept()
+}
