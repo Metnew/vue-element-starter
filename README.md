@@ -12,7 +12,7 @@
 - [Fetch polyfill](https://www.npmjs.com/package/whatwg-fetch)
 - [Webpack](https://webpack.github.io/)
 - [TestCafe](https://testcafe.devexpress.com/) for testing
-- Eslint, Babel (stage-3)
+- Eslint, Babel (stage-0)
 
 ## Out-of-box:
 ### (theme color is purple, but you can use your own color, more info below)
@@ -30,7 +30,7 @@ app
 │   ├── store - Vuex store
 │   ├── styles - styles folder with scss vars, mixins, etc.
 │   ├── views - your pages
-│   ├── app.js - import deps and App component
+│   ├── app.js - import dependencies and App component
 │   ├── index.js - main file
 │   ├── pwa.js - for PWA apps
 ├── dist - build.
