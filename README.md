@@ -47,11 +47,10 @@ Template built based on [Vuepack bolirplate](https://github.com/egoist/vuepack)
  git clone https://github.com/Metnew/vue-element-starter.git vue-project  
  cd vue-project && rm -rf .git
  npm install
- # npm run generate_default_styles - `./client/element-variables.css` exists by default
- # You can run this command to generate it again(if it doesn't exist)
+ npm run generate_default_styles # run this command to generate default_styles for Element-theme
 ```
 
-[Element-theme](https://www.npmjs.com/package/element-theme) default styles are already in `/client` folder. Just **change primary-color** in `./client/element-variables.css` and run:
+[Element-theme](https://www.npmjs.com/package/element-theme) generates default styles. Just **change primary-color** in `./client/element-variables.css` and run:
 
 ```bash
  npm run generate_theme
