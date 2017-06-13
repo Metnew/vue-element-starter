@@ -11,7 +11,6 @@ import 'whatwg-fetch' // polyfill
 import 'material-design-icons' // material icons, because Element-UI icons set is incomplete
 import 'styles/index.scss' // require styles using webpack alias
 
-// Vuex! - if you need Vuex in your project  - uncomment this line
 sync(store, router)
 Vue.use(Element, { locale })
 
