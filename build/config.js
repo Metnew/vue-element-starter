@@ -14,6 +14,8 @@ module.exports = {
     'vuex-router-sync',
     'whatwg-fetch',
     'normalize.css',
-    'offline-plugin/runtime'
+    'offline-plugin/runtime',
+    'element-ui',
+    'material-design-icons'
   ]
 }
