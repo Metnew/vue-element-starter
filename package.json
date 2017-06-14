@@ -8,8 +8,8 @@
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js",
     "lint": "eslint client/* --ext .js --ext .vue",
-    "generate_default_styles": "et -i ./client/element-variables.css",
-    "generate_theme": "et -c ./client/element-variables.css"
+    "generate_default_styles": "et -i ./client/styles/element-variables.css",
+    "generate_theme": "et -c ./client/styles/element-variables.css"
   },
   "author": "Vladimir Metnev <vladimirmetnew@gmail.com>",
   "license": "MIT",
