@@ -1,6 +1,8 @@
 # Vue-Element-Starter
 #### Demo: https://metnew.github.io/vue-element-starter/
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Metnew/vue-element-starter.svg)](https://greenkeeper.io/)
+
 [![bitHound Overall Score](https://www.bithound.io/github/Metnew/vue-element-starter/badges/score.svg)](https://www.bithound.io/github/Metnew/vue-element-starter)
 [![bitHound Dependencies](https://www.bithound.io/github/Metnew/vue-element-starter/badges/dependencies.svg)](https://www.bithound.io/github/Metnew/vue-element-starter/master/dependencies/npm)
 [![Known Vulnerabilities](https://snyk.io/test/github/metnew/vue-element-starter/badge.svg)](https://snyk.io/test/github/metnew/vue-element-starter)
