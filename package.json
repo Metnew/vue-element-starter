@@ -18,7 +18,7 @@
     "element-ui": "^1.2.9",
     "material-design-icons": "^3.0.1",
     "normalize.css": "^6.0.0",
-    "vue": "^2.3.0",
+    "vue": "^2.5.17",
     "vue-router": "^2.5.2",
     "vuex": "^2.3.1",
     "vuex-router-sync": "^4.1.2",
